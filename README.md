@@ -23,16 +23,17 @@ Make sure that the wallet has at least 0.001 Eth on the chain that you will depl
 
 ## Run
 
-Compiles `Lock.sol`, deploys it to the Base Sepolia chain, and then writes to the contract.
-
-The `Lock.sol` contract locks the funds up until the date specified during its deployment. The `showcase.js` script deploys this contract with the parameter set to 10 seconds in the future. 
-
 ```shell
 npx hardhat compile
 npx hardhat run scripts/showcase.js --network base-sepolia
 ```
+Compiles `Lock.sol` and then deploys it to the Base Sepolia chain.
 
-Expected output:
+The `Lock.sol` contract locks up the funds until the date specified during its deployment. 
+
+The `showcase.js` script deploys this contract with the parameter set to 10 seconds in the future. 
+
+Expected output of running `showcase.js`:
 ```
 Lock deployed to: [contract address]
 Attempting to withdraw
